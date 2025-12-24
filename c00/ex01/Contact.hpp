@@ -1,6 +1,8 @@
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
 #include <string>
+#include <iostream>
+#include <iomanip>
 class Contact {
     private:
         std::string firstName;
@@ -15,6 +17,9 @@ class Contact {
                         const std::string nname, const std::string pnumber,
                         const std::string secret);
         bool getIsEmpty() const;
+        void displaySummary(int index) const;
+        void displayDetails() const;
+        void clearContact();
 
 };
 #endif
