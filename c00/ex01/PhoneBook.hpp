@@ -9,6 +9,6 @@ class PhoneBook {
     public:
         void addContact();
         void displayContacts() const;
-        void displayContactDetails(int index) const;
+        void searchContact() const;
 };
 #endif

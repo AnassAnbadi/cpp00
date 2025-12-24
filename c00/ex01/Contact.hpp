@@ -8,16 +8,13 @@ class Contact {
         std::string nickname;
         std::string phoneNumber;
         std::string darkestSecret;
+        bool isEmpty;
     public:
-        void setFirstName(const std::string fname);
-        void setLastName(const std::string lname);
-        void setNickname(const std::string nname);
-        void setPhoneNumber(const std::string pnumber);
-        void setDarkestSecret(const std::string secret);
-        std::string getFirstName() const;
-        std::string getLastName() const;
-        std::string getNickname() const;
-        std::string getPhoneNumber() const;
-        std::string getDarkestSecret() const;
+            Contact() : isEmpty(true) {}
+        void setContact(const std::string fname, const std::string lname,
+                        const std::string nname, const std::string pnumber,
+                        const std::string secret);
+        bool getIsEmpty() const;
+
 };
 #endif
