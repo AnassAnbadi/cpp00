@@ -1,5 +1,5 @@
 #include "PhoneBook.hpp"
-
+int PhoneBook::contactCount = 0;
 void PhoneBook::addContact() {
     std::string fname, lname, nname, pnumber, secret;
 
