@@ -18,6 +18,5 @@ int main() {
             std::cout << "Invalid command. Please try again." << std::endl;
         }
     }
-
     return 0;
 }

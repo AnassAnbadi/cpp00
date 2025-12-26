@@ -29,12 +29,3 @@ void Contact::displayDetails() const {
     std::cout << "Phone Number: " << phoneNumber << std::endl;
     std::cout << "Darkest Secret: " << darkestSecret << std::endl;
 }
-
-void Contact::clearContact() {
-    firstName.clear();
-    lastName.clear();
-    nickname.clear();
-    phoneNumber.clear();
-    darkestSecret.clear();
-    isEmpty = true;
-}

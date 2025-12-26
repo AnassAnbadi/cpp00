@@ -19,7 +19,6 @@ class Contact {
         bool getIsEmpty() const;
         void displaySummary(int index) const;
         void displayDetails() const;
-        void clearContact();
 
 };
 #endif
