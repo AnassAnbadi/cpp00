@@ -20,7 +20,16 @@ bool isOnlySpaces(const std::string s)
     }
     return true;
 }
-
+bool ft_getline(std::string &input)
+{
+    std::getline(std::cin, input);
+    if (std::cin.eof())
+    {
+        std::cout << "\nEnd of input detected. Exiting program." << std::endl;
+        return true;
+    }
+    return false;
+}
 bool ASCII_CHECK(std::string s)
 {
     size_t i = 0;
@@ -58,32 +67,28 @@ void PhoneBook::addContact() {
     }
 
     std::cout << "Enter First Name: ";
-    std::getline(std::cin, fname);
-    if (isOnlySpaces(fname) || !ASCII_CHECK(fname) ) {
+    if (!std::getline(std::cin, fname) || (isOnlySpaces(fname) || !ASCII_CHECK(fname)) ) {
         std::cout << "First Name cannot be empty or only spaces!" << std::endl;
         return;
     }
     std::cout << "Enter Last Name: ";
-    std::getline(std::cin, lname);
-    if (isOnlySpaces(lname) || !ASCII_CHECK(lname)) {
+    if (!std::getline(std::cin, lname) ||  isOnlySpaces(lname) || !ASCII_CHECK(lname)) {
         std::cout << "Last Name cannot be empty or only spaces!" << std::endl;
         return;
     }
     std::cout << "Enter Nickname: ";
-    std::getline(std::cin, nname);
-    if (isOnlySpaces(nname) || !ASCII_CHECK(nname)) {
+    if (!std::getline(std::cin, nname) || isOnlySpaces(nname) || !ASCII_CHECK(nname)) {
         std::cout << "Nickname cannot be empty or only spaces!" << std::endl;
         return;
     }
     std::cout << "Enter Phone Number: ";
     std::getline(std::cin, pnumber);
-    if (isOnlySpaces(pnumber) || !isNumber(pnumber)) {
+    if (!std::getline(std::cin, pnumber) || isOnlySpaces(pnumber) || !isNumber(pnumber)) {
         std::cout << "Phone Number cannot be empty or only spaces !" << std::endl;
         return;
     }
     std::cout << "Enter Darkest Secret: ";
-    std::getline(std::cin, secret);
-    if (isOnlySpaces(secret) || !ASCII_CHECK(secret)) {
+    if (!std::getline(std::cin, secret) || isOnlySpaces(secret) || !ASCII_CHECK(secret)) {
         std::cout << "Darkest Secret cannot be empty or only spaces!" << std::endl;
         return;
     }
@@ -104,8 +109,7 @@ void PhoneBook::searchContact() const {
     std::string index;
     displayContacts();
     std::cout << "Enter the index of the contact to view details: ";
-    std::getline(std::cin, index);
-    if (index.length() != 1 || !std::isdigit(index[0])) {
+    if (!std::getline(std::cin, index) || index.length() != 1 || !std::isdigit(index[0])) {
         std::cout << "Invalid index!" << std::endl;
         return;
     }
