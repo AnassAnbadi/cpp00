@@ -12,10 +12,9 @@ class Contact {
         std::string darkestSecret;
         bool isEmpty;
     public:
-            Contact() : isEmpty(true) {}
-        void setContact(const std::string fname, const std::string lname,
-                        const std::string nname, const std::string pnumber,
-                        const std::string secret);
+        void setContact(std::string fname, std::string lname,
+                        std::string nname, std::string pnumber,
+                        std::string secret);
         bool getIsEmpty() const;
         void displaySummary(int index) const;
         void displayDetails() const;

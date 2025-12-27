@@ -21,7 +21,7 @@ int main(int ac, char **av)
         return 0;
     }
 
-    for (int j = 1; j < ac; j++)
+    for (int j = 1; j < ac; j++)//here
     {
         std::string s(av[j]);
 

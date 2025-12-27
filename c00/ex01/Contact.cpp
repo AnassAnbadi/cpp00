@@ -1,8 +1,8 @@
 #include "Contact.hpp"
 
-void Contact::setContact(const std::string fname, const std::string lname,
-                         const std::string nname, const std::string pnumber,
-                         const std::string secret) {
+void Contact::setContact(std::string fname, std::string lname,
+                         std::string nname, std::string pnumber,
+                         std::string secret){
     firstName = fname;
     lastName = lname;
     nickname = nname;
