@@ -82,7 +82,6 @@ void PhoneBook::addContact() {
         return;
     }
     std::cout << "Enter Phone Number: ";
-    std::getline(std::cin, pnumber);
     if (!std::getline(std::cin, pnumber) || isOnlySpaces(pnumber) || !isNumber(pnumber)) {
         std::cout << "Phone Number cannot be empty or only spaces !" << std::endl;
         return;
