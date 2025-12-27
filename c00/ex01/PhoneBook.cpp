@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aanbadi <aanbadi@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/27 15:09:28 by aanbadi           #+#    #+#             */
+/*   Updated: 2025/12/27 15:53:16 by aanbadi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "PhoneBook.hpp"
 
 bool is_space(char c)
@@ -19,16 +31,6 @@ bool isOnlySpaces(const std::string s)
         i++;
     }
     return true;
-}
-bool ft_getline(std::string &input)
-{
-    std::getline(std::cin, input);
-    if (std::cin.eof())
-    {
-        std::cout << "\nEnd of input detected. Exiting program." << std::endl;
-        return true;
-    }
-    return false;
 }
 bool ASCII_CHECK(std::string s)
 {
